@@ -1,0 +1,61 @@
+@import '../../../styles/fonts.sass'
+@import '../../../styles/variables.sass'
+
+.person
+  position: relative
+  overflow: hidden
+  @include adaptivPadding($pcSize: 150, $mobSize: 40, $mode: 1)
+  @include adaptivPadding($pcSize: 150, $mobSize: 40, $mode: 3)
+  >p
+    text-align: center
+    padding-bottom: 15px
+    @extend %f26-27-2
+  .wrap
+    display: flex
+    align-items: flex-end
+    position: relative
+    max-width: 1085px
+    margin: 0 auto
+    padding-left: 10px
+    padding-right: 10px
+    @include breakpoint($point: 3)
+      flex-direction: column
+      align-items: center
+    &::before
+      content: ""
+      position: absolute
+      width: 100vw
+      height: 400px
+      left: 504px
+      @include breakpoint($point: 4)
+        left: 400px
+      bottom: 0
+      transform: translate(-100%, 0px)
+      border-radius: 0px 6px 6px 0px
+      background: $bluedark_211
+      @include breakpoint($point: 3)
+        display: none
+    .client__left
+      flex: 55%
+      @include breakpoint($point: 3)
+        padding-bottom: 30px
+      img
+        max-width: 100%
+    .client__right
+      max-width: 418px
+      .svg
+        padding-bottom: 43px
+      p:nth-child(2)
+        @extend %f16-24
+        padding-bottom: 40px
+      p:nth-child(3)
+        font-weight: 500
+        padding-bottom: 40px
+  .dotten
+    position: absolute
+    top: 30%
+    right: 0
+    @include breakpoint($point: 5)
+      top: 10%
+    @include breakpoint($point: 2)
+      display: none

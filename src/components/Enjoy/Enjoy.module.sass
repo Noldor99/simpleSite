@@ -1,0 +1,43 @@
+@import '../../styles/variables.sass'
+@import '../../styles/fonts.sass'
+.enjoy
+  position: relative
+  .wrap
+    max-width: 1110px
+    margin: 0 auto
+    padding-right: 5px
+    padding-left: 5px
+    display: flex
+    align-items: center
+    gap: 10px
+    @include adaptivPadding($pcSize: 123, $mobSize: 40,$mode: 3)
+    .photo
+      flex: 0 0 52%
+      img
+        max-width: 100%
+    .container
+      max-width: 444px
+      p:nth-child(1)
+        @extend %f26-27-2
+        padding-bottom: 16px
+      p:nth-child(2)
+        @extend %f16-24
+        padding-bottom: 56px
+    .icons
+      display: flex
+      gap: 20px
+      @include breakpoint($point: 2)
+        flex-direction: column
+        align-items: center
+        padding-bottom: 20px
+  .rectangle
+    position: absolute
+    right: 0
+    bottom: 0
+    @include breakpoint($point: 4 )
+      display: none
+@include breakpoint($point: 3)
+  .wrap
+    flex-direction: column
+    .container
+      flex: none

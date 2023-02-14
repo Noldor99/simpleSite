@@ -1,0 +1,66 @@
+@import './../../styles/fonts.sass'
+@import './../../styles/variables.sass'
+
+.wrap
+  position: relative
+  overflow: hidden
+  .container
+    padding-top: 100px
+    max-width: 950px
+    margin: 0 auto
+    padding-right: 10px
+    padding-left: 10px
+    display: flex
+    @include breakpoint($point: 3)
+      flex-direction: column
+      align-items: center
+    .right
+      >p
+        max-width: 395px
+        @include adaptivPadding($pcSize: 170, $mobSize: 40,$mode: 3)
+
+        @extend %f36-46
+        @include breakpoint($point: 3)
+          max-width: inherit
+      .card1
+        @include adaptivPadding($pcSize: 113, $mobSize: 40,$mode: 3)
+        position: relative
+        .dotten1
+          position: absolute
+          top: 40%
+          left: -28%
+          z-index: 1
+          @include breakpoint($point: 3)
+            display: none
+    .left
+      padding-left: 85px
+      @include breakpoint($point: 3)
+        padding-left: 0
+      .card2
+        @include adaptivPadding($pcSize: 113, $mobSize: 40,$mode: 3)
+        position: relative
+        .dotten2
+          position: absolute
+          top: 0
+          right: 0
+          transform: translate(50%, -50%)
+          z-index: 1
+          @include breakpoint($point: 3)
+            display: none
+      .card3
+        @include adaptivPadding($pcSize: 113, $mobSize: 40,$mode: 3)
+        position: relative
+        .dotten3
+          position: absolute
+          bottom: 0
+          right: 0
+          transform: translate(50%, -15%)
+          z-index: 1
+          @include breakpoint($point: 3)
+            display: none
+  .asimptota1
+    position: absolute
+    top: 0
+    right: 0
+    @include breakpoint($point: 3)
+      display: none

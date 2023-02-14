@@ -1,0 +1,20 @@
+@import "./../../../styles/variables.sass"
+
+.input
+  border: none
+  outline: none
+  border-radius: $borderRadius
+  padding: 17px 10px
+  font-family: inherit
+  background: $light_f
+  color: $blue_D3
+  transition: all 0.3s ease
+  width: 100%
+  &:placeholder
+    font-size: 14px
+    line-height: 14px
+    text-align: center
+    color: #000000
+    opacity: 0.5
+  &:hover
+    background: rgab($light_f, 0.8)

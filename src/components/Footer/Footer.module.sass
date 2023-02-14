@@ -1,0 +1,72 @@
+@import '../../styles/variables.sass'
+@import '../../styles/fonts.sass'
+
+.footer
+  width: 100%
+  background: $blue_D3
+  position: relative
+  overflow-x: hidden
+  &::before
+    content: ""
+    position: absolute
+    width: 100%
+    bottom: 60px
+    border: 1px solid #fff
+  .wrap
+    max-width: 1192px
+    margin: 0 auto
+    padding: 55px 10px 21px
+    display: flex
+    justify-content: space-between
+    gap: 10px
+    flex-wrap: wrap
+    .footer__logo
+      flex: 0 1 254px
+      padding-bottom: 40px
+    .footer__content
+      display: flex
+      gap: 60px
+      @include breakpoint($point: 4)
+        gap: 30px
+        justify-content: space-between
+        flex: 100%
+      .footer__content__col
+        .footer__content__col__headline
+          font-weight: 500
+          color: $light_f
+          position: relative
+          padding-bottom: 5px
+
+          &::before
+            content: ""
+            position: absolute
+            bottom: 0
+            border-bottom: 2px solid $light_f
+            width: 90%
+        .footer__content__col__links
+          margin-top: 35px
+          li
+            margin-bottom: 18px
+            a
+              @extend %f14-14
+              text-decoration: none
+    .subscribe
+      p
+        @extend %f18-26
+        max-width: 364px
+        padding-bottom: 20px
+      .form
+        display: flex
+        align-items: center
+        gap: 10px
+    .footer__bootom
+      margin-top: 50px
+      flex: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      p
+        @extend %f11-11
+      .footer__base__socials
+        display: flex
+        gap: 18px

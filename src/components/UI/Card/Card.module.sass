@@ -1,0 +1,47 @@
+@import '../../../styles/variables.sass'
+@import '../../../styles/fonts.sass'
+
+.wrap
+  position: relative
+  z-index: 2
+  @include adaptivPadding($pcSize: 48, $mobSize: 48,$mode: 1)
+  @include adaptivPadding($pcSize: 48, $mobSize: 30,$mode: 2)
+  @include adaptivPadding($pcSize: 48, $mobSize: 30,$mode: 3)
+  @include adaptivPadding($pcSize: 48, $mobSize: 30,$mode: 4)
+
+  background: $light_f
+  box-shadow: $box-shadow
+  border-radius: 10px
+  max-width: 380px
+  @include breakpoint($point: 3)
+    max-width: inherit
+  .box
+    width: 132px
+    height: 132px
+    border-radius: 50%
+    background: linear-gradient(180.99deg, rgba(255, 255, 255, 0) 6.19%, rgba(100, 181, 246, 0.6) 103.09%)
+    position: relative
+    margin: 0 auto 56px
+    transition: all 10s ease
+    &:hover
+      transition: all 1s ease
+      background: #b31818
+      box-shadow: 5px 20px 50px rgb(255, 6, 6)
+    .icon1
+      position: absolute
+      top: -50%
+      left: -50%
+    .icon2
+      position: absolute
+      top: 22%
+      left: -53%
+    .icon3
+      position: absolute
+      top: 0%
+      left: -29%
+  p:nth-child(2)
+    @extend %f20-30
+    padding-bottom: 16px
+  p:nth-child(3)
+    @extend %f16-26
+    padding-bottom: 62px

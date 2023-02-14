@@ -1,0 +1,15 @@
+@import "./../../../styles/variables.sass";
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  span {
+    font-size: 2rem;
+
+    font-weight: 900;
+
+    margin-left: 12px;
+  }
+}

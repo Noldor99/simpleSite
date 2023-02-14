@@ -1,0 +1,63 @@
+@import '../../styles/variables.sass'
+@import '../../styles/fonts.sass'
+
+.header
+  width: 100%
+  padding: 46px 10px 0 10px
+  @include adaptivPadding($pcSize: 46, $mobSize: 20,$mode: 1)
+  @include adaptivPadding($pcSize: 80, $mobSize: 30,$mode: 3)
+
+  .box
+    max-width: 920px
+    margin: 0 auto
+
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  .logo_image
+    display: flex
+    align-items: center
+    gap: 10px
+  .menu
+    display: flex
+    align-items: center
+    font-size: 22px
+    line-height: 28px
+    gap: 30px
+    a
+      text-decoration: none
+      color: #0F001A
+      &:hover
+        color: $blue_D3
+.mobile_btn
+  display: none
+@include breakpoint($point: 3)
+  .mobile_btn
+    display: block
+    // position: absolute
+    // right: 10px
+    // top: 27px
+    cursor: pointer
+    z-index: 10
+
+  .menu
+    display: flex
+    flex-direction: column
+    justify-content: center
+    position: fixed
+    right: -100%
+
+    top: 0
+    bottom: 0
+    width: 100%
+    height: 100vh
+    background-color: #f8f8f8
+    z-index: 10
+    transition: right 1s
+
+  .active
+    right: 0
+
+  .menu a
+    font-size: 28px
